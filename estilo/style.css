@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');/*google fontes Bebas*/
+
+@font-face {
+    font-family:'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    
+}
+
+
+:root {
+    --cor1:#ADFFB3;
+    --cor2:#1FE049;
+    --cor3:#00310A;
+    --cor4:#19B33A;
+    --cor5:#070f07;
+
+    --fonte-padrao: arial,verdana,helvetica,sans-serif;
+    --fonte-destaque:'Bebas Neue','cursive' ;
+    --fonte-android: 'Android',cursive ;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}/* esse simbolo * serve para selecionar todos os seletores */
+
+body {
+    background-color:#93A392;
+    font-family: var(--fonte-padrao);
+
+    
+}
+aside {
+    background-color: #1fe049cf;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.629);
+
+}
+
+aside > ul{
+    text-decoration: none;
+    list-style-type:'\1F5F9\000A0\00A0';/* EMOJIPIDIA/ O CODIGO 00A0 É O ESPACO DO SIMBOLO PRA A LETRA*/
+      list-style-position: inside;/*posicao da lista*/
+      columns: 2;/*COLUNAS QUE POSSO COLOCAR*/   
+     
+    
+}
+
+aside h3 {
+      background-color: #070f07;
+      color: #ADFFB3;
+      padding: 12px;
+      margin: -15px -15px 0px -15px;/*posicao negativa e pra colocar um caixa dentro da outra */
+      border-radius: 10px 10px 0px 0px;
+}
+a.externo::after{
+
+    content:'\00A0\1F517';/*class externo , fazer marcacao de class no texto */
+}
+div.video{/*posicionamento do video */
+    background-color: #19B33A;
+    margin-bottom:35px;
+    margin: 0px -20px 35px -20px;
+    padding-bottom: 58.4%;
+    position: relative;
+    
+
+}
+div.video > iframe{/*posicionamento do video */
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+header{
+    background-image:linear-gradient(to top, var(--cor3), var(--cor2))
+    ;
+    text-align: center;
+    min-height: 150px;
+    padding-top: 45px;
+}
+header > p {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 35px;
+    font-family: var(--fonte-padrao);
+    font-size: 25px;
+    max-width: 900px;
+    margin: auto;
+    padding-right: 10px;
+    padding-left: 10px ;
+}
+header > h1 {
+    color:white;
+    font-family: var(--fonte-destaque); 
+    font-size: 66px;
+    text-shadow: 4px 2px 2px black; 
+    
+}
+nav{
+    background-color: var(--cor3);
+    padding: 10px;
+    box-shadow: 0px 7px 7px black;
+    
+}
+nav > a {
+    color: white;
+    padding: 15px;
+    border-radius: 15px;/*borda aredondada do botao*/
+    text-decoration: none;/*retirar sublinhado */
+    font-weight: bold;/*engrossar a letra*/
+    transition-duration: 0.5s;/*duracao quando passa o mouse*/
+
+}
+nav > a:hover{/*hover quando passa o mouse */
+    background-color: var(--cor5);
+    color: var(--cor2);
+}
+main{
+    background-color:white;
+    min-width: 280px;
+    max-width:1000px;
+    margin: auto;/*texto centralizado*/
+    margin-bottom: 25px;/*margem abaixo*/
+    padding: 20px;
+    margin-top: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.423);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+   
+}
+main img {
+    width: 100%;
+}
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    margin: auto;
+
+
+}
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+}
+main h2 {
+    font-family: var(--fonte-android);
+}
+main p{
+    margin: 15px 0px;
+    text-align: justify;/*alinhamento de espaco no texto*/
+    text-indent: 25px;/*recuo de parafrafo*/
+    line-height: 22px;
+    font-size: 1em;
+}
+main strong{
+    font-weight: bold;/*fonte em negrito*/
+}
+main a{
+
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor4);
+    padding: 2px 6px;
+}
+main a:hover{
+
+    color: #070f07;
+}
+footer{
+    background-color: var(--cor3);
+    color: white;
+}
+footer{
+    font-family: var(--fonte-android);
+    background-color: #19B33A;
+    color: #070f07;
+    font-size:20px ;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.582);
+    text-shadow: 2px 2px 2px green;
+    margin-bottom: 25px;
+}
